@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SimpleController">
+   <children>
+      <Pane layoutX="5.0" layoutY="14.0" prefHeight="400.0" prefWidth="591.0">
+         <children>
+            <Label layoutX="28.0" layoutY="131.0" prefHeight="40.0" prefWidth="199.0" text="Saisir le nom de patient ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField layoutX="296.0" layoutY="138.0" promptText="Nom" />
+            <Label layoutX="94.0" layoutY="36.0" text="Afficher la liste des Rendezvous D'un Patient">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Button layoutX="244.0" layoutY="247.0" mnemonicParsing="false" text="Afficher" />
+            <Button layoutX="42.0" layoutY="335.0" mnemonicParsing="false" onAction="#changeScreenButtonSample" onMouseClicked="#changeScreenButtonSample" text="Précedent" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

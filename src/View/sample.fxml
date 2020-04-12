@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SimpleController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="431.0" fitWidth="609.0" layoutY="-3.0" opacity="0.44" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@téléchargement.png" />
+         </image>
+      </ImageView>
+     
+      <AnchorPane layoutX="1.0" layoutY="2.0" prefHeight="400.0" prefWidth="609.0">
+         <children>
+            <Button layoutX="54.0" layoutY="200.0" mnemonicParsing="false" onAction="#changeScreenButtonAfficher" onMouseClicked="#changeScreenButtonAfficher" text="Afficher Les RDV" />
+            <Button layoutX="64.0" layoutY="100.0" mnemonicParsing="false" onAction="#changeScreenButtonCreer" onMouseClicked="#changeScreenButtonCreer" text="Creer Un RDV" textFill="#bf3232">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Button layoutX="50.0" layoutY="149.0" mnemonicParsing="false" onAction="#changeScreenButtonConsulter" onMouseClicked="#changeScreenButtonConsulter" text="Consulter Un RDV" />
+            <Button layoutX="52.0" layoutY="250.0" mnemonicParsing="false" onAction="#changeScreenButtonImprimer" onMouseClicked="#changeScreenButtonImprimer" text="Imprimer un RDV" />
+            <Button layoutX="53.0" layoutY="303.0" mnemonicParsing="false" onAction="#changeScreenButtonModifier" onMouseClicked="#changeScreenButtonModifier" text="Modifier un RDV" />
+               <ListView fx:id="listView" layoutX="296.0" layoutY="112.0" prefHeight="244.0" prefWidth="200.0" />
+               <Label layoutX="147.0" layoutY="28.0" text="Gestion Des RendezVous">
+                  <font>
+                     <Font size="25.0" />
+                  </font>
+               </Label>
+               <Label layoutX="273.0" layoutY="75.0" text="Les RendezVous D'aujourd'hui">
+                  <font>
+                     <Font size="16.0" />
+                  </font>
+               </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
+</AnchorPane>
