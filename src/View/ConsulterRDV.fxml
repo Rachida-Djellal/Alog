@@ -7,23 +7,25 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SimpleController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.SimpleController">
    <children>
       <Pane layoutX="5.0" layoutY="14.0" prefHeight="400.0" prefWidth="591.0">
          <children>
-            <Label layoutX="28.0" layoutY="131.0" prefHeight="40.0" prefWidth="199.0" text="Saisir le nom de patient ">
+            <Label layoutX="28.0" layoutY="131.0" prefHeight="40.0" prefWidth="215.0" text="Saisir les infos  du patient ">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField layoutX="296.0" layoutY="138.0" promptText="Nom" />
+            <TextField fx:id="nom" layoutX="296.0" layoutY="138.0" promptText="Nom" />
             <Label layoutX="94.0" layoutY="36.0" text="Afficher la liste des Rendezvous D'un Patient">
                <font>
                   <Font size="19.0" />
                </font>
             </Label>
-            <Button layoutX="244.0" layoutY="247.0" mnemonicParsing="false" text="Afficher" />
+            <Button layoutX="437.0" layoutY="323.0" mnemonicParsing="false" text="Afficher" />
             <Button layoutX="42.0" layoutY="335.0" mnemonicParsing="false" onAction="#changeScreenButtonSample" onMouseClicked="#changeScreenButtonSample" text="Précedent" />
+            <TextField fx:id="prenom" layoutX="296.0" layoutY="181.0" promptText="Prenom" />
+            <TextField fx:id="adresse1" layoutX="296.0" layoutY="225.0" promptText="Adresse" />
          </children>
       </Pane>
    </children>

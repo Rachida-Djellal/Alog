@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SimpleController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.SimpleController">
    <children>
       <Label layoutX="107.0" layoutY="60.0" text="Afficher Les Rendezvous D'un jour ">
          <font>
@@ -14,7 +14,7 @@
          </font>
       </Label>
       <Label layoutX="107.0" layoutY="171.0" text="Jour" />
-      <DatePicker layoutX="173.0" layoutY="167.0" />
+      <DatePicker fx:id="Jour" layoutX="173.0" layoutY="167.0" />
       <Button layoutX="180.0" layoutY="264.0" mnemonicParsing="false" text="Afficher" />
       <Button layoutX="52.0" layoutY="345.0" mnemonicParsing="false" onAction="#changeScreenButtonSample" onMouseClicked="#changeScreenButtonSample" text="Précedent" />
    </children>

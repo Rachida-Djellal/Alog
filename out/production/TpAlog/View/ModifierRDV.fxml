@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SimpleController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.SimpleController">
    <children>
       <Pane layoutX="7.0" prefHeight="400.0" prefWidth="600.0">
          <children>
@@ -18,12 +18,12 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <CheckBox layoutX="120.0" layoutY="142.0" mnemonicParsing="false" text="Supprimer" />
-            <CheckBox layoutX="120.0" layoutY="232.0" mnemonicParsing="false" text="Avancer" />
-            <CheckBox layoutX="120.0" layoutY="192.0" mnemonicParsing="false" text="Reporter" />
-            <TextField layoutX="392.0" layoutY="197.0" promptText="ex:09h00" />
-            <TextField layoutX="402.0" layoutY="130.0" promptText="Nom" />
-            <DatePicker layoutX="389.0" layoutY="249.0" promptText="Date" />
+            <CheckBox fx:id="supp" layoutX="120.0" layoutY="142.0" mnemonicParsing="false" text="Supprimer" />
+            <CheckBox fx:id="avancer" layoutX="120.0" layoutY="232.0" mnemonicParsing="false" text="Avancer" />
+            <CheckBox fx:id="reporter" layoutX="120.0" layoutY="192.0" mnemonicParsing="false" text="Reporter" />
+            <TextField fx:id="heure1" layoutX="392.0" layoutY="197.0" promptText="ex:09h00" />
+            <TextField fx:id="nom1" layoutX="402.0" layoutY="130.0" promptText="Nom" />
+            <DatePicker fx:id="date1" layoutX="389.0" layoutY="249.0" promptText="Date" />
             <Label layoutX="284.0" layoutY="134.0" text="Nom de Patient:" />
             <Label layoutX="312.0" layoutY="201.0" text="Heure:" />
             <Label layoutX="316.0" layoutY="253.0" text="Date:" />
