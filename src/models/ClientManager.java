@@ -1,5 +1,6 @@
 package models;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -27,7 +28,7 @@ public class ClientManager  extends DataBaseManager {
         String sql ="INSERT INTO " + clientTable +" (first_name,last_name, address ,phone,email,information) VALUES (' "+client.getFirstName() +"',' " + client.getLastName()+"','"+ client.getAddress()+"','" + client.getPhone()+"',' " + client.getEmail() +"','"+client.getInformation() +"')";
         try {
             super.insert(sql);
-
+            
         } catch (SQLException e) {
 
             e.printStackTrace();

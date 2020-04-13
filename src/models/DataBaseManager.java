@@ -10,7 +10,7 @@ public abstract class DataBaseManager {
     private static final String url  ="jdbc:sqlite:medical-appointment.db" ;
 
     static final String  clientTable = "client";
-    protected static final String  appointmentTable = "appointment";
+    static final String  appointmentTable = "appointment";
 
 
 

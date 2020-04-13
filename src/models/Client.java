@@ -2,7 +2,7 @@ package models;
 
 public class Client  {
 
-    private final int id ;
+    private  int id ;
     private final String firstName ;
     private final String lastName ;
     private String phone ;
@@ -12,7 +12,7 @@ public class Client  {
 
 
 
-    public Client(int id, String firstName, String lastName, String address,String phone, String email, String information) {
+    Client(int id, String firstName, String lastName, String address, String phone, String email, String information) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -22,6 +22,14 @@ public class Client  {
         this.information = information;
     }
 
+    Client ( String firstName, String lastName, String address, String phone, String email, String information) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.phone = phone;
+        this.email = email;
+        this.information = information;
+    }
 
     public String getAddress() {
         return address;

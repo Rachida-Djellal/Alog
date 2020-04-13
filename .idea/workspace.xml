@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/src/models/AppointmentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/AppointmentManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/ClientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/ClientManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/DataBaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/DataBaseManager.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -228,7 +229,7 @@
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1586644503653" duration="15665000" />
-      <workItem from="1586721376026" duration="1135000" />
+      <workItem from="1586721376026" duration="10161000" />
     </task>
     <servers />
   </component>
@@ -251,6 +252,17 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/models/AppointmentManager.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

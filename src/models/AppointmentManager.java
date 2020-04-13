@@ -13,9 +13,9 @@ import java.util.Locale;
 public class AppointmentManager extends DataBaseManager {
 
     // The date format
-    private final static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+    private final static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault());
 
-    private final static String[] appointmentColumns = {"id" , "date", "id_client" , "object"} ;
+    private final static String[] appointmentColumns = {"id" , "appointment_date", "id_client" , "object"} ;
 
     private final static String[] clientColumns = {"id_client", "first_name" , "last_name" , "address" , "phone" , "email" , "information"} ;
 
@@ -37,9 +37,9 @@ public class AppointmentManager extends DataBaseManager {
     public ArrayList<Appointment> getAll(){
 
         // Client table is defined in the DataBaseManager class
-        String sql = "SELECT a.id , a.date , a.id_client  , a.object , c.first_name , c.last_name , c.address , c.phone , c.email , c.information FROM  " +
+        String sql = "SELECT a.id , a.appointment_date , a.id_client  , a.object , c.first_name , c.last_name , c.address , c.phone , c.email , c.information FROM  " +
                     appointmentTable  +" AS a JOIN " + clientTable +
-                    " AS c ON c.id = a.id_client ORDER BY a.date ASC" ;
+                    " AS c ON c.id = a.id_client ORDER BY a.appointment_date ASC" ;
 
         ArrayList<Appointment> result = new ArrayList<>();
 
@@ -68,7 +68,7 @@ public class AppointmentManager extends DataBaseManager {
 
        String sql = " WITH appointment_query AS (SELECT * FROM appointment WHERE id_client = "+ client.getId()+ ")" +
                     " SELECT * FROM appointment_query AS q JOIN client ON client.id = q.id_client"+
-                    " ORDER BY q.date ASC";
+                    " ORDER BY q.appointment_date ASC";
 
         ArrayList<Appointment> result = new ArrayList<>();
 
@@ -89,9 +89,20 @@ public class AppointmentManager extends DataBaseManager {
     }
 
 
+    public void update( Appointment appointment){
+
+        String sql = "UPDATE " + appointmentTable + " AS a SET " + appointmentColumns[1] + " = " + dateFormat.format(appointment.getTime()) +
+                     " WHERE a.id = " + appointment.getId();
+        try {
+            insert(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+    }
 
     public ArrayList<Appointment> getTodayAppointment(){
-        String sql ="SELECT * FROM appointment as a where strftime('%Y/%m/%d', a.date) =strftime('%Y/%m/%d', date('now'))" ;
+        String sql ="SELECT * FROM appointment as a where strftime('%Y/%m/%d', "+appointmentColumns[1]+") =strftime('%Y/%m/%d', date('now'))" ;
         ArrayList<Appointment> result = new ArrayList<>();
 
         // query function is declared in the DataBaseManage Class

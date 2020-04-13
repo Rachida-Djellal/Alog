@@ -36,7 +36,24 @@ public class Appointment {
     public String getObject() {
         return object;
     }
-/*  public Appointment(Client client , Date time) {
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
+    }
+
+    public void setObject(String object) {
+        this.object = object;
+    }
+
+ /*  public Appointment(Client client , Date time) {
         this.client = client ;
         this.time  = time ;
 
