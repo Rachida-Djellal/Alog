@@ -6,24 +6,27 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Locale;
+import java.util.*;
 
 public class AppointmentManager extends DataBaseManager {
 
-    // The date format
-    private final static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
-    private final static SimpleDateFormat dateFormatDetails = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault());
-    private final static String[] appointmentColumns = {"id" , "appointment_date", "id_client" , "object"} ;
+    // The date formats
+    private final static SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+    private final static SimpleDateFormat DATE_FORMAT_DETAILS = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault());
 
+    // The columns in the database table for each table
+    private final static String[] appointmentColumns = {"id" , "appointment_date", "id_client" , "object"} ;
     private final static String[] clientColumns = {"id_client", "first_name" , "last_name" , "address" , "phone" , "email" , "information"} ;
 
-    private static AppointmentManager  singleInstance  = null;
+    // These maps are for not duplication of the instance of clients or appointments
+
+
 
     /**
      * Because it's singleton
      */
+    private static AppointmentManager  singleInstance  = null;
+
     private  AppointmentManager(){};
 
     public static AppointmentManager getInstance() {
@@ -48,18 +51,15 @@ public class AppointmentManager extends DataBaseManager {
 
         // query function is declared in the DataBaseManage Class
         try (ResultSet resultSet = super.query(sql)) {
-
             while (resultSet.next()){
                 Client client = this.fetchClient(resultSet);
                 Appointment appointment = fetchAppointment(resultSet,client);
-                result.add(appointment);
+                 result.add(appointment);
             }
-
         } catch (SQLException | ParseException e) {
             e.printStackTrace();
             System.out.println(e.getMessage());
         }
-
         return result ;
     }
 
@@ -94,7 +94,7 @@ public class AppointmentManager extends DataBaseManager {
 
     public void update( Appointment appointment){
 
-        String sql = "UPDATE " + appointmentTable + " AS a SET " + appointmentColumns[1] + " = " + dateFormatDetails.format(appointment.getTime()) +
+        String sql = "UPDATE " + appointmentTable + " AS a SET " + appointmentColumns[1] + " = " + DATE_FORMAT_DETAILS.format(appointment.getTime()) +
                      " WHERE a.id = " + appointment.getId();
         try {
             insert(sql);
@@ -127,49 +127,56 @@ public class AppointmentManager extends DataBaseManager {
 
 
 
+
+
     /**
      * fetch an appointment from a resultSet  , using the appointmentColumns ( it is declared above )
      * I don't use all the columns -I talk about id_client because I'm passing the Client as a parameter to the function
      * also the name -id_client- on the clientColumns doesn't exist on the clientTable it's named id ( this may make confuse )
      * */
-    //private final static String[] appointmentColumns = {"id" , "date", "id_client" , "object"} ;
-    @NotNull
+     @NotNull
     private Appointment fetchAppointment(ResultSet resultSet ,  Client client) throws SQLException, ParseException {
 
         int id = resultSet.getInt(appointmentColumns[0]);
+        if(appointmentInInstance.containsKey(id)){
+            return  appointmentInInstance.get(id);
+        }
         String time = resultSet.getString(appointmentColumns[1]);
-        Date date =dateFormat.parse(time);
+        Date date =DATE_FORMAT_DETAILS.parse(time);
         String object =resultSet.getString(appointmentColumns[3]);
-
-        return new Appointment(id,client,date , object);
+        Appointment appointment = new Appointment(id,client,date , object);
+         appointmentInInstance.put(id, appointment);
+        return  appointment;
     }
-
 
 
     /**
      * fetch a client from a resultSet  , using the clientColumns ( it is declared above )
      * */
-    //private final static String[] clientColumns = {"id_client", "first_name" , "last_name" , "address" , "phone" , "email" , "information"} ;
 
     @NotNull
     private Client fetchClient(ResultSet resultSet ) throws SQLException {
         int id_client = resultSet.getInt(clientColumns[0]);
+
+        if (clientInInstance.containsKey(id_client)){
+            return clientInInstance.get(id_client);
+        }
         String firstName = resultSet.getString(clientColumns[1]);
         String lastName = resultSet.getString(clientColumns[2]);
         String address = resultSet.getString(clientColumns[3]);
         String phone = resultSet.getString(clientColumns[4]);
         String email = resultSet.getString(clientColumns[5]);
         String information = resultSet.getString(clientColumns[6]);
-
-        return new Client(id_client,firstName,lastName , address , phone , email , information );
+        Client client =new Client(id_client,firstName,lastName , address , phone , email , information );
+        clientInInstance.put(id_client,client);
+        return client;
     }
-
 
 
     public void create(@NotNull Appointment appointment){
 
         // I have to change this query , but now it works
-        String sql ="INSERT INTO " + appointmentTable +" ('appointment_date','id_client' , 'object') VALUES ('"+dateFormatDetails.format(appointment.getTime())+"','"+appointment.getClient().getId()+"','"+appointment.getObject() +"')";
+        String sql ="INSERT INTO " + appointmentTable +" ('appointment_date','id_client' , 'object') VALUES ('"+DATE_FORMAT_DETAILS.format(appointment.getTime())+"','"+appointment.getClient().getId()+"','"+appointment.getObject() +"')";
         try {
             super.insert(sql);
 
@@ -180,10 +187,9 @@ public class AppointmentManager extends DataBaseManager {
     }
 
 
-
     public ArrayList<Appointment> getAppointmentByDay(Date day){
-        
-      String sql = " WITH dat as (SELECT * FROM appointment  WHERE strftime('%Y-%m-%d' ,appointment.appointment_date) = '" + dateFormat.format(day)  +"')"+
+
+      String sql = " WITH dat as (SELECT * FROM appointment  WHERE strftime('%Y-%m-%d' ,appointment.appointment_date) = '" + DATE_FORMAT.format(day)  +"')"+
                    "  SELECT * FROM dat JOin client on client.id = dat.id_client" ;
 
         ArrayList<Appointment> result = new ArrayList<>();

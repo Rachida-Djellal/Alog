@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/TpAlog/View/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/TpAlog/models/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/medical-appointment.db" beforeDir="false" afterPath="$PROJECT_DIR$/medical-appointment.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/View/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/View/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TpAlog/models/AppointmentManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/models/AppointmentManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/models/ClientManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/models/ClientManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/models/DataBaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/models/DataBaseManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/AppointmentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/AppointmentManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/ClientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/ClientManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/DataBaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/DataBaseManager.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -236,7 +228,7 @@
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1586644503653" duration="15665000" />
       <workItem from="1586721376026" duration="11208000" />
-      <workItem from="1587132256690" duration="3534000" />
+      <workItem from="1587132256690" duration="7315000" />
     </task>
     <servers />
   </component>
