@@ -13,14 +13,17 @@ import java.util.Locale;
 public class AppointmentManager extends DataBaseManager {
 
     // The date format
-    private final static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault());
-
+    private final static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+    private final static SimpleDateFormat dateFormatDetails = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault());
     private final static String[] appointmentColumns = {"id" , "appointment_date", "id_client" , "object"} ;
 
     private final static String[] clientColumns = {"id_client", "first_name" , "last_name" , "address" , "phone" , "email" , "information"} ;
 
     private static AppointmentManager  singleInstance  = null;
 
+    /**
+     * Because it's singleton
+     */
     private  AppointmentManager(){};
 
     public static AppointmentManager getInstance() {
@@ -91,7 +94,7 @@ public class AppointmentManager extends DataBaseManager {
 
     public void update( Appointment appointment){
 
-        String sql = "UPDATE " + appointmentTable + " AS a SET " + appointmentColumns[1] + " = " + dateFormat.format(appointment.getTime()) +
+        String sql = "UPDATE " + appointmentTable + " AS a SET " + appointmentColumns[1] + " = " + dateFormatDetails.format(appointment.getTime()) +
                      " WHERE a.id = " + appointment.getId();
         try {
             insert(sql);
@@ -166,7 +169,7 @@ public class AppointmentManager extends DataBaseManager {
     public void create(@NotNull Appointment appointment){
 
         // I have to change this query , but now it works
-        String sql ="INSERT INTO " + appointmentTable +" ('date','id_client' , 'object') VALUES ('"+dateFormat.format(appointment.getTime())+"','"+appointment.getClient().getId()+"','"+appointment.getObject() +"')";
+        String sql ="INSERT INTO " + appointmentTable +" ('appointment_date','id_client' , 'object') VALUES ('"+dateFormatDetails.format(appointment.getTime())+"','"+appointment.getClient().getId()+"','"+appointment.getObject() +"')";
         try {
             super.insert(sql);
 
@@ -178,5 +181,26 @@ public class AppointmentManager extends DataBaseManager {
 
 
 
+    public ArrayList<Appointment> getAppointmentByDay(Date day){
+        
+      String sql = " WITH dat as (SELECT * FROM appointment  WHERE strftime('%Y-%m-%d' ,appointment.appointment_date) = '" + dateFormat.format(day)  +"')"+
+                   "  SELECT * FROM dat JOin client on client.id = dat.id_client" ;
+
+        ArrayList<Appointment> result = new ArrayList<>();
+        try (ResultSet resultSet = super.query(sql)) {
+
+            while (resultSet.next()) {
+                Client client = fetchClient(resultSet);
+                Appointment appointment = fetchAppointment(resultSet, client);
+                result.add(appointment);
+            }
+        }
+        catch (SQLException | ParseException e) {
+                e.printStackTrace();
+                System.out.println(e.getMessage());
+            }
+        return result;
+
+    }
 
 }

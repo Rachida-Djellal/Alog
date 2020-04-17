@@ -28,13 +28,14 @@ public class ClientManager  extends DataBaseManager {
         String sql ="INSERT INTO " + clientTable +" (first_name,last_name, address ,phone,email,information) VALUES (' "+client.getFirstName() +"',' " + client.getLastName()+"','"+ client.getAddress()+"','" + client.getPhone()+"',' " + client.getEmail() +"','"+client.getInformation() +"')";
         try {
             super.insert(sql);
-            
+
         } catch (SQLException e) {
 
             e.printStackTrace();
             System.out.println(e.getMessage());
         }
     }
+
 
     public ArrayList<Client> getAll(){
 

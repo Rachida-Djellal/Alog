@@ -34,6 +34,7 @@ public abstract class DataBaseManager {
      ResultSet query(String sql) throws SQLException {
           ResultSet resultSet = null ;
           Statement stmt  = this.getConnection().createStatement();
+          System.out.println(sql);
           resultSet = stmt.executeQuery(sql) ;
             // stmt.executeUpdate();
           System.out.println(stmt.getFetchSize());

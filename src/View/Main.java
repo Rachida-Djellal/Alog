@@ -27,6 +27,18 @@ public class Main extends Application {
     public static void main(String[] args)
     {
 
+
+       // ClientManager clientManager = ClientManager.getInstance();
+     //   clientManager.insertClient(new Client(11,"Imad","Stihi","Ain Naaja","0424236751","imad@gmail.com" , "Bien"));
+
+     //   Appointment app = new Appointment(10, new Client(11,"Youcef","lerari","Bouzerria","0424236751","youcef@gmail.com" , "Bien"),new Date(),"visite");
+        AppointmentManager appointmentManager = AppointmentManager.getInstance();
+       // appointmentManager.create(app);
+        ArrayList<Appointment> res = appointmentManager.getAppointmentByDay(new Date());
+        for (Appointment re:
+             res) {
+            System.out.println(re);
+        }
         launch(args);
     }
 }
