@@ -25,7 +25,7 @@ import models.Client;
 
 import javax.swing.*;
 
-import static com.sun.javafx.scene.control.skin.Utils.getResource;
+//import static com.sun.javafx.scene.control.skin.Utils.getResource;
 
 public class RdvTableController {
     @FXML
