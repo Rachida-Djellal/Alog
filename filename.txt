@@ -1,0 +1,80 @@
+******************************************* Rendez-vous N° 2 ******************************************
+La date : 12-04-2020  23:46
+L'objet : Radio
+
+-------- Le patient N°6-------
+
+- Le nom et prenom du patient : Ismail Kherbach
+- L'adresse : Mazouna
+- Le numero du telephone : 0356536346
+- Email : gi_kharbach@esi.dz
+- Information supplementaire : lkjdsfsdf
+
+*******************************************************************************************************
+
+
+
+******************************************* Rendez-vous N° 1 ******************************************
+La date : 12-04-2020  23:58
+L'objet : Visite
+
+-------- Le patient N°3-------
+
+- Le nom et prenom du patient : Aymen Djabali 
+- L'adresse : Chrarba
+- Le numero du telephone : 0435224355
+- Email : ga.test@gmail.com
+- Information supplementaire : ewr
+
+*******************************************************************************************************
+
+
+
+******************************************* Rendez-vous N° 3 ******************************************
+La date : 17-04-2020  14:32
+L'objet : visite
+
+-------- Le patient N°11-------
+
+- Le nom et prenom du patient :  Imad  Stihi
+- L'adresse : Ain Naaja
+- Le numero du telephone : 0424236751
+- Email :  imad@gmail.com
+- Information supplementaire : Bien
+
+*******************************************************************************************************
+
+
+
+******************************************* Rendez-vous N° 4 ******************************************
+La date : 17-04-2020  14:33
+L'objet : visite
+
+-------- Le patient N°11-------
+
+- Le nom et prenom du patient :  Imad  Stihi
+- L'adresse : Ain Naaja
+- Le numero du telephone : 0424236751
+- Email :  imad@gmail.com
+- Information supplementaire : Bien
+
+*******************************************************************************************************
+
+
+
+******************************************* Rendez-vous N° 5 ******************************************
+La date : 17-04-2020  14:36
+L'objet : visite
+
+-------- Le patient N°11-------
+
+- Le nom et prenom du patient :  Imad  Stihi
+- L'adresse : Ain Naaja
+- Le numero du telephone : 0424236751
+- Email :  imad@gmail.com
+- Information supplementaire : Bien
+
+*******************************************************************************************************
+
+
+

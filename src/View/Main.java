@@ -1,5 +1,6 @@
 package View;
 
+import Controller.print.PrinterTxtFile;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -34,13 +35,19 @@ public class Main extends Application {
      //   Appointment app = new Appointment(10, new Client(11,"Youcef","lerari","Bouzerria","0424236751","youcef@gmail.com" , "Bien"),new Date(),"visite");
         AppointmentManager appointmentManager = AppointmentManager.getInstance();
        // appointmentManager.create(app);
+        PrinterTxtFile printerTxtFile = PrinterTxtFile.getInstance();
         ArrayList<Appointment> res = appointmentManager.getAll();
-        for (Appointment re: res) {
-            try {
-                System.out.println(re.getTime());
-            }catch (Exception e){
+        try {
+
+            printerTxtFile.openFile();
+            for (Appointment re : res) {
+                printerTxtFile.print(re);
+            }
+             printerTxtFile.closeFile();
+        }catch (Exception e) {
                 e.printStackTrace();
-            System.out.println(e.getMessage());}
+                //System.out.println(e.getMessage());}
+
         }
         launch(args);
     }

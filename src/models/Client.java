@@ -52,14 +52,16 @@ public class Client  {
 
 
 
-    int getId() { return id; }
+   public int getId() { return id; }
 
 
    public String getFirstName() {
         return firstName;
     }
 
-    String getLastName() {
+    public String getLastName() {
         return lastName;
     }
+
+
 }
