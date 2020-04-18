@@ -22,7 +22,8 @@ public class Client  {
         this.information = information;
     }
 
-    Client ( String firstName, String lastName, String address, String phone, String email, String information) {
+
+   public Client ( String firstName, String lastName, String address, String phone, String email, String information) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
@@ -55,13 +56,19 @@ public class Client  {
    public int getId() { return id; }
 
 
+
    public String getFirstName() {
         return firstName;
     }
+
 
     public String getLastName() {
         return lastName;
     }
 
-
+    @Override
+    public String toString() {
+        return this.getFirstName()+this.getLastName()+this.getAddress()+this.getPhone()+this.getEmail()+this.getInformation();
+    }
 }
+

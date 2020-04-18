@@ -69,4 +69,3 @@ public class ClientManager  extends DataBaseManager {
         }
 
 }
-

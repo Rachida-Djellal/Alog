@@ -20,7 +20,12 @@ public class Appointment {
         this.time = time;
         this.object = object ;
     }
+    public Appointment( Client client, Date time , String object) {
 
+        this.client = client;
+        this.time = time;
+        this.object = object ;
+    }
     public long getId() {
         return id;
     }
@@ -53,13 +58,11 @@ public class Appointment {
         this.object = object;
     }
 
- /*  public Appointment(Client client , Date time) {
-        this.client = client ;
-        this.time  = time ;
 
+    @Override
+    public String toString() {
+        return this.getClient()+this.getObject()+this.getTime();
     }
-     public String getObject() {
-        return object;
-    }
-*/
+
+
 }

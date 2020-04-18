@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.Date;
+
 
 public class AppointmentManager extends DataBaseManager {
 
@@ -60,7 +62,8 @@ public class AppointmentManager extends DataBaseManager {
             e.printStackTrace();
             System.out.println(e.getMessage());
         }
-        return result ;
+        return result;
+
     }
 
 /**
@@ -97,7 +100,9 @@ public class AppointmentManager extends DataBaseManager {
         String sql = "UPDATE " + appointmentTable + " AS a SET " + appointmentColumns[1] + " = " + DATE_FORMAT_DETAILS.format(appointment.getTime()) +
                      " WHERE a.id = " + appointment.getId();
         try {
-            insert(sql);
+
+            query(sql);
+
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println(e.getMessage());

@@ -1,5 +1,7 @@
-package Controller;
+package View;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,61 +9,35 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SimpleController implements Initializable {
-    public Label helloWorld;
+import models.Appointment;
+import models.AppointmentManager;
 
-    public void sayHelloWorld(ActionEvent actionEvent) {
-        helloWorld.setText("Hello World!");
+public class SimpleController  implements Initializable{
 
-    }
 
-    @FXML
-    private TextField Nom;
-    @FXML
-    private DatePicker Date;
-    @FXML
-    private TextField Heure;
-    @FXML
-    private TextField Objet;
-    @FXML private ListView listView;
-    public void CreerRdv( ActionEvent actionEvent)
-    {
-
-        String nom= Nom.getText();
-        String date= Date.getEditor().getText();
-        String heure= Heure.getText();
-        String objet= Objet.getText();
+// get AppointmentManager instance
+    AppointmentManager manager=AppointmentManager.getInstance();
 
 
 
 
 
-    }
-    public void changeScreenButtonSample(ActionEvent event) throws IOException
-    {
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("../View/sample.fxml"));
-        Scene tableViewScene = new Scene(tableViewParent);
 
-        //This line gets the Stage information
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-
-        window.setScene(tableViewScene);
-        window.show();
-    }
     public void changeScreenButtonCreer(ActionEvent event) throws IOException
     {
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("../View/creerRDV.fxml"));
-        Scene tableViewScene = new Scene(tableViewParent);
+        Parent root = FXMLLoader.load(getClass().getResource("creerRDV.fxml"));
+        Scene tableViewScene = new Scene(root);
 
         //This line gets the Stage information
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -71,7 +47,7 @@ public class SimpleController implements Initializable {
     }
     public void changeScreenButtonConsulter(ActionEvent event) throws IOException
     {
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("../View/ConsulterRDV.fxml"));
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("ConsulterRDV.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
 
         //This line gets the Stage information
@@ -82,7 +58,7 @@ public class SimpleController implements Initializable {
     }
     public void changeScreenButtonImprimer(ActionEvent event) throws IOException
     {
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("../View/ImprimerRdv.fxml"));
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("ImprimerRdv.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
 
         //This line gets the Stage information
@@ -93,7 +69,7 @@ public class SimpleController implements Initializable {
     }
     public void changeScreenButtonModifier(ActionEvent event) throws IOException
     {
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("../View/ModifierRDV.fxml"));
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("RdvTable.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
 
         //This line gets the Stage information
@@ -101,10 +77,12 @@ public class SimpleController implements Initializable {
 
         window.setScene(tableViewScene);
         window.show();
+
     }
+
     public void changeScreenButtonAfficher(ActionEvent event) throws IOException
     {
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("../View/AfficherRDV.fxml"));
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("AfficherRDV.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
 
         //This line gets the Stage information
@@ -113,11 +91,15 @@ public class SimpleController implements Initializable {
         window.setScene(tableViewScene);
         window.show();
     }
-
+    @FXML
+    private ListView<Appointment> list;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
-        listView.getItems().addAll("Golf Balls","Wedges","Irons","Tees","Driver","Putter");
+        DateFormat format = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        Date date = new Date();
+        System.out.println( "\n" + date + "\n" );
+        ObservableList<Appointment> data =FXCollections.observableArrayList(manager.getAppointmentByDay(date));
+        list.setItems(data);
     }
 }
