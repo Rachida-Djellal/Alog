@@ -97,10 +97,11 @@ public class AppointmentManager extends DataBaseManager {
 
     public void update( Appointment appointment){
 
-        String sql = "UPDATE " + appointmentTable + " AS a SET " + appointmentColumns[1] + " = " + DATE_FORMAT_DETAILS.format(appointment.getTime()) +
-                     " WHERE a.id = " + appointment.getId();
+        String sql = "UPDATE " + appointmentTable + " AS a SET " + appointmentColumns[1] + " = '" + DATE_FORMAT_DETAILS.format(appointment.getTime()) +
+                     "' WHERE a.id = " + appointment.getId();
         try {
 
+            System.out.println(sql);
             query(sql);
 
         } catch (SQLException e) {
@@ -211,6 +212,21 @@ public class AppointmentManager extends DataBaseManager {
                 System.out.println(e.getMessage());
             }
         return result;
+
+    }
+
+
+
+    public  void delete(Appointment appointment){
+
+        String sql ="DELETE FROM " + appointmentTable + "WHERE id = '"+appointment.getId() + "'";
+        
+        try {
+            query(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
 
     }
 
