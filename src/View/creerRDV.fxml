@@ -8,12 +8,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="526.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.SimpleController">
+<AnchorPane prefHeight="526.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.CreerRDVController">
    <children>
       <TextField fx:id="Nom" layoutX="200.0" layoutY="139.0" promptText="Nom de Patient" />
       <TextField fx:id="Objet" layoutX="182.0" layoutY="383.0" promptText="Objet de Rdv" />
-      <Button layoutX="499.0" layoutY="451.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Ajouter" />
-      <DatePicker fx:id="Date" layoutX="175.0" layoutY="278.0" />
+      <Button layoutX="499.0" layoutY="451.0" mnemonicParsing="false" onAction="#CreerRdv" onMouseClicked="#CreerRdv" prefHeight="25.0" prefWidth="90.0" text="Ajouter" />
+      <DatePicker fx:id="Date1" layoutX="175.0" layoutY="278.0" />
       <TextField fx:id="Heure" layoutX="182.0" layoutY="328.0" promptText="ex:08h00" />
       <Label layoutX="72.0" layoutY="143.0" text="Nom de Patient" />
       <Label layoutX="81.0" layoutY="282.0" text="Date de Rdv" />

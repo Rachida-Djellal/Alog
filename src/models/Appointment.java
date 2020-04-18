@@ -10,12 +10,22 @@ public class Appointment {
     private Date time ;
 
 
-    public Appointment(long id, Client client, Date time) {
+
+    private String object ;
+
+
+    public Appointment(long id, Client client, Date time , String object) {
         this.id = id;
         this.client = client;
         this.time = time;
+        this.object = object ;
     }
+    public Appointment( Client client, Date time , String object) {
 
+        this.client = client;
+        this.time = time;
+        this.object = object ;
+    }
     public long getId() {
         return id;
     }
@@ -27,10 +37,37 @@ public class Appointment {
     public Date getTime() {
         return time;
     }
-/*  public Appointment(Client client , Date time) {
+
+    public String getObject() {
+        return object;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
+    }
+
+    public void setObject(String object) {
+        this.object = object;
+    }
+
+    @Override
+    public String toString() {
+        return this.getClient()+this.getObject()+this.getTime();
+    }
+    /*  public Appointment(Client client , Date time) {
         this.client = client ;
         this.time  = time ;
-
+    }
+     public String getObject() {
+        return object;
     }
 */
 }

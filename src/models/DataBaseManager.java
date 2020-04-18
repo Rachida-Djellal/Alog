@@ -3,6 +3,7 @@ package models;
 import java.util.ArrayList;
 import java.util.List;
 import java.sql.*;
+import java.util.TreeMap;
 
 public abstract class DataBaseManager {
 
@@ -10,7 +11,9 @@ public abstract class DataBaseManager {
     private static final String url  ="jdbc:sqlite:medical-appointment.db" ;
 
     static final String  clientTable = "client";
-    protected static final String  appointmentTable = "appointment";
+    static final String  appointmentTable = "appointment";
+    static TreeMap<Integer, Client> clientInInstance = new TreeMap<>();
+    static TreeMap<Integer, Appointment>  appointmentInInstance = new TreeMap<>();
 
 
 
@@ -35,8 +38,6 @@ public abstract class DataBaseManager {
           ResultSet resultSet = null ;
           Statement stmt  = this.getConnection().createStatement();
           resultSet = stmt.executeQuery(sql) ;
-            // stmt.executeUpdate();
-          System.out.println(stmt.getFetchSize());
 
          return resultSet;
      }
