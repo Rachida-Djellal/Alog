@@ -70,5 +70,9 @@ public class Client  {
     public String toString() {
         return this.getFirstName()+this.getLastName()+this.getAddress()+this.getPhone()+this.getEmail()+this.getInformation();
     }
+
+    public void setId(int id) {
+        this.id = id ;
+    }
 }
 

@@ -80,8 +80,8 @@ public class CreerRDVController
         String information=infos.getText();
         String adr=adresse.getText();
         Client patient = new Client(nom,pre,adr,telephone,eml,information);
+        manager1.insertClient(patient);
         Appointment RDV= new Appointment(patient,datee,objet);
         manager.create(RDV);
-        manager1.insertClient(patient);
     }
 }

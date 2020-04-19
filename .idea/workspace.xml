@@ -5,11 +5,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/filename.txt" beforeDir="false" afterPath="$PROJECT_DIR$/filename.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/medical-appointment.db" beforeDir="false" afterPath="$PROJECT_DIR$/medical-appointment.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/View/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/View/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/models/Appointment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/models/Appointment.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TpAlog/models/AppointmentManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/models/AppointmentManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TpAlog/models/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/models/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/models/ClientManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/models/ClientManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/CreerRDVController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/CreerRDVController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/AppointmentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/AppointmentManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/ClientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/ClientManager.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -234,7 +236,7 @@
       <workItem from="1586721376026" duration="11208000" />
       <workItem from="1587132256690" duration="13940000" />
       <workItem from="1587247505191" duration="285000" />
-      <workItem from="1587248487476" duration="1897000" />
+      <workItem from="1587248487476" duration="5326000" />
     </task>
     <servers />
   </component>

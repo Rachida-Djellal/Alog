@@ -184,6 +184,7 @@ public class AppointmentManager extends DataBaseManager {
         // I have to change this query , but now it works
         String sql ="INSERT INTO " + appointmentTable +" ('appointment_date','id_client' , 'object') VALUES ('"+DATE_FORMAT_DETAILS.format(appointment.getTime())+"','"+appointment.getClient().getId()+"','"+appointment.getObject() +"')";
         try {
+            System.out.println(sql);
             super.insert(sql);
 
         } catch (SQLException e) {
@@ -218,9 +219,7 @@ public class AppointmentManager extends DataBaseManager {
 
 
     public  void delete(Appointment appointment){
-
         String sql ="DELETE FROM " + appointmentTable + "WHERE id = '"+appointment.getId() + "'";
-        
         try {
             query(sql);
         } catch (SQLException e) {

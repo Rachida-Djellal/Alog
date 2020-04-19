@@ -26,8 +26,15 @@ public class ClientManager  extends DataBaseManager {
 
         // Client table is defined in the DataBaseManager class
         String sql ="INSERT INTO " + clientTable +" (first_name,last_name, address ,phone,email,information) VALUES (' "+client.getFirstName() +"',' " + client.getLastName()+"','"+ client.getAddress()+"','" + client.getPhone()+"',' " + client.getEmail() +"','"+client.getInformation() +"')";
+        String getQuery = "SELECT id FROM "+clientTable + " WHERE  first_name = ' "+client.getFirstName() + "' AND last_name =' "+client.getLastName()+"'";
+        System.out.println(getQuery);
         try {
             super.insert(sql);
+            ResultSet resultSet = super.query(getQuery);
+            client.setId(resultSet.getInt("id"));
+
+            System.out.println(client.getId());
+
 
         } catch (SQLException e) {
 
