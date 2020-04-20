@@ -8,32 +8,32 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="526.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.CreerRDVController">
+<AnchorPane prefHeight="578.0" prefWidth="765.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.CreerRDVController">
    <children>
-      <TextField fx:id="Nom" layoutX="200.0" layoutY="139.0" promptText="Nom de Patient" />
-      <TextField fx:id="Objet" layoutX="182.0" layoutY="383.0" promptText="Objet de Rdv" />
-      <Button layoutX="499.0" layoutY="451.0" mnemonicParsing="false" onAction="#CreerRdv" onMouseClicked="#CreerRdv" prefHeight="25.0" prefWidth="90.0" text="Ajouter" />
-      <DatePicker fx:id="Date1" layoutX="175.0" layoutY="278.0" />
-      <TextField fx:id="Heure" layoutX="182.0" layoutY="328.0" promptText="ex:08h00" />
-      <Label layoutX="72.0" layoutY="143.0" text="Nom de Patient" />
-      <Label layoutX="81.0" layoutY="282.0" text="Date de Rdv" />
-      <Label layoutX="77.0" layoutY="332.0" text="Heure de Rdv" />
-      <Label layoutX="78.0" layoutY="387.0" text="Objet de Rdv" />
+      <TextField fx:id="Nom" layoutX="75.0" layoutY="140.0" promptText="Nom de Patient" />
+      <TextField fx:id="Objet" layoutX="380.0" layoutY="309.0" promptText="Objet de Rdv" />
+      <Button layoutX="544.0" layoutY="519.0" mnemonicParsing="false" onAction="#CreerRdv" onMouseClicked="#CreerRdv" prefHeight="25.0" prefWidth="90.0" text="Ajouter" />
+      <DatePicker fx:id="Date1" layoutX="63.0" layoutY="315.0" />
+      <TextField fx:id="Heure" layoutX="72.0" layoutY="403.0" promptText="ex:08h00" />
+      <Label layoutX="39.0" layoutY="98.0" text="Nom de Patient" />
+      <Label layoutX="49.0" layoutY="279.0" text="Date de Rdv" />
+      <Label layoutX="46.0" layoutY="364.0" text="Heure de Rdv" />
+      <Label layoutX="345.0" layoutY="271.0" text="Objet de Rdv" />
       <Label layoutX="136.0" layoutY="43.0" text="Creation D'un Rendezvous ">
          <font>
             <Font size="21.0" />
          </font>
       </Label>
-      <Button layoutX="27.0" layoutY="476.0" mnemonicParsing="false" onAction="#changeScreenButtonSample" onMouseClicked="#changeScreenButtonSample" text="Precedent" />
-      <TextField fx:id="Prenom" layoutX="200.0" layoutY="209.0" />
-      <Label layoutX="77.0" layoutY="213.0" text="Prenom de Patient" />
-      <TextField fx:id="email" layoutX="402.0" layoutY="171.0" />
-      <TextField fx:id="tele" layoutX="415.0" layoutY="127.0" />
-      <TextField fx:id="adresse" layoutX="415.0" layoutY="234.0" />
-      <TextArea fx:id="infos" layoutX="402.0" layoutY="291.0" prefHeight="146.0" prefWidth="200.0" />
-      <Label layoutX="380.0" layoutY="270.0" text="Information Medicales" />
-      <Label layoutX="391.0" layoutY="205.0" text="Adresse de Patient" />
-      <Label layoutX="307.0" layoutY="175.0" text="Email de Patient" />
-      <Label layoutX="415.0" layoutY="81.0" text="Telephone de Patient" />
+      <Button layoutX="46.0" layoutY="519.0" mnemonicParsing="false" onAction="#changeScreenButtonSample" onMouseClicked="#changeScreenButtonSample" text="Precedent" />
+      <TextField fx:id="Prenom" layoutX="72.0" layoutY="222.0" />
+      <Label layoutX="48.0" layoutY="184.0" text="Prenom de Patient" />
+      <TextField fx:id="email" layoutX="380.0" layoutY="222.0" />
+      <TextField fx:id="tele" layoutX="380.0" layoutY="140.0" />
+      <TextField fx:id="adresse" layoutX="380.0" layoutY="391.0" />
+      <TextArea fx:id="infos" layoutX="551.0" layoutY="236.0" prefHeight="146.0" prefWidth="200.0" />
+      <Label layoutX="600.0" layoutY="184.0" text="Information Medicales" />
+      <Label layoutX="316.0" layoutY="356.0" text="Adresse de Patient" />
+      <Label layoutX="349.0" layoutY="184.0" text="Email de Patient" />
+      <Label layoutX="359.0" layoutY="98.0" text="Telephone de Patient" />
    </children>
 </AnchorPane>

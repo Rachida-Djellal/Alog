@@ -1,4 +1,4 @@
-package Controller.print;
+package Controller;
 
 import models.Appointment;
 

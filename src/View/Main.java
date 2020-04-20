@@ -1,21 +1,16 @@
 package View;
 
-import Controller.print.PrinterTxtFile;
+import Controller.PrinterTxtFile;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 import models.Appointment;
 import models.AppointmentManager;
-import models.Client;
-import models.ClientManager;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 
 public class Main extends Application {
@@ -30,7 +25,7 @@ public class Main extends Application {
 
 
 
-        primaryStage.setScene(new Scene(root, 650, 470));
+        primaryStage.setScene(new Scene(root, 650, 500));
         primaryStage.show();
 
     }

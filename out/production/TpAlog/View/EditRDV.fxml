@@ -31,6 +31,6 @@
          </children>
       </GridPane>
       <Button layoutX="489.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleOk" onMouseClicked="#handleOk" text="Ok" />
-      <Button layoutX="410.0" layoutY="365.0" mnemonicParsing="false" onAction="#handleCancel" onMouseClicked="#handleCancel" text="Cancel" />
+      <Button layoutX="410.0" layoutY="365.0" mnemonicParsing="false" onAction="#changeScreenButton" onMouseClicked="#changeScreenButton" text="Cancel" />
    </children>
 </AnchorPane>

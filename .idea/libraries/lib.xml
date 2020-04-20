@@ -1,13 +1,20 @@
 <component name="libraryTable">
   <library name="lib">
     <CLASSES>
-      <root url="file://$USER_HOME$/Desktop/2cs2/javafx-sdk-11.0.2/lib" />
+      <root url="file://$PROJECT_DIR$/../2cs2/javafx-sdk-11.0.2/lib" />
+      <root url="jar://$PROJECT_DIR$/../Nouveau dossier/commons-codec-1.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Nouveau dossier/commons-compress-1.19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Nouveau dossier/commons-collections4-4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Nouveau dossier/commons-math3-3.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Nouveau dossier/curvesapi-1.06.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Nouveau dossier/poi-4.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Nouveau dossier/poi-ooxml-4.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Nouveau dossier/poi-ooxml-schemas-4.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Nouveau dossier/SparseBitSet-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Nouveau dossier/xmlbeans-3.1.0.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="file://$USER_HOME$/Desktop/2cs2/javafx-sdk-11.0.2/lib" />
-    </SOURCES>
-    <jarDirectory url="file://$USER_HOME$/Desktop/2cs2/javafx-sdk-11.0.2/lib" recursive="false" />
-    <jarDirectory url="file://$USER_HOME$/Desktop/2cs2/javafx-sdk-11.0.2/lib" recursive="false" type="SOURCES" />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../2cs2/javafx-sdk-11.0.2/lib" recursive="false" />
   </library>
 </component>

@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Aficher2Controller">
     <children>
         <Pane layoutX="-3.0" layoutY="-7.0" prefHeight="416.0" prefWidth="619.0">
             <children>
-                <ScrollPane layoutX="165.0" layoutY="55.0" prefHeight="307.0" prefWidth="245.0">
+                <ScrollPane layoutX="165.0" layoutY="55.0" prefHeight="307.0" prefWidth="357.0">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="305.0" prefWidth="249.0">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="309.0" prefWidth="354.0">
                             <children>
-                                <ListView fx:id="list4" layoutX="1.0" layoutY="-1.0" prefHeight="295.0" prefWidth="229.0" />
+                                <ListView fx:id="list4" layoutX="1.0" layoutY="-1.0" prefHeight="295.0" prefWidth="341.0" />
                             </children>
                         </AnchorPane>
                     </content>
                 </ScrollPane>
+            <Button layoutX="52.0" layoutY="350.0" mnemonicParsing="false" onAction="#changeScreenButton" onMouseClicked="#changeScreenButton" text="ACCUIEL" />
             </children>
         </Pane>
     </children>

@@ -6,10 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import models.Appointment;
 import models.AppointmentManager;
@@ -64,9 +61,58 @@ public class CreerRDVController
     ClientManager manager1=ClientManager.getInstance();
 
     // la fonction pour la creation d'un rendez vous d'un patient
+    private boolean isInputValid() {
+        String errorMessage = "";
+
+        if (Nom.getText() == null || Nom.getText().length() == 0) {
+            errorMessage += "No valid first name!\n";
+        }
+        if (Prenom.getText() == null || Prenom.getText().length() == 0) {
+            errorMessage += "No valid last name!\n";
+        }
+        if (Objet.getText() == null || Objet.getText().length() == 0) {
+            errorMessage += "No valid object name!\n";
+        }
+        if (email.getText() == null || email.getText().length() == 0) {
+            errorMessage += "No valid email name!\n";
+        }
+        if (adresse.getText() == null || adresse.getText().length() == 0) {
+            errorMessage += "No valid adresse name!\n";
+        }
+        if (infos.getText() == null || infos.getText().length() == 0) {
+            errorMessage += "No valid informations name!\n";
+        }
+        if (tele.getText() == null || tele.getText().length() == 0) {
+            errorMessage += "No valid phone name!\n";
+        }
+        if (Date1.getValue() == null || Date1.getValue().toString().length() == 0) {
+            errorMessage += "No valid date name!\n";
+        }
+        if (Heure.getText() == null || Heure.getText().length() == 0) {
+            errorMessage += "No valid heure name!\n";
+        }
+
+
+
+
+        if (errorMessage.length() == 0) {
+            return true;
+        } else {
+            // Show the error message.
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+
+            alert.setTitle("Invalid Fields");
+            alert.setHeaderText("Please correct invalid fields");
+            alert.setContentText(errorMessage);
+
+            alert.showAndWait();
+
+            return false;
+        }
+    }
     public void CreerRdv( ActionEvent actionEvent)
     {
-
+        boolean valid = isInputValid();
         String nom= Nom.getText();
         LocalDate date= Date1.getValue();
         Instant instant = Instant.from(date.atStartOfDay(ZoneId.systemDefault()));
@@ -79,9 +125,21 @@ public class CreerRDVController
         String eml=email.getText();
         String information=infos.getText();
         String adr=adresse.getText();
+
         Client patient = new Client(nom,pre,adr,telephone,eml,information);
         manager1.insertClient(patient);
         Appointment RDV= new Appointment(patient,datee,objet);
         manager.create(RDV);
+
+   if  (valid==true) {
+       Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+
+       alert.setTitle("confirmation");
+       alert.setHeaderText("succee");
+       alert.setContentText("Le rendezvous est ajouter.");
+
+       alert.showAndWait();
+   }
+
     }
 }

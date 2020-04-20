@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
 import javafx.stage.Stage;
 import models.AppointmentManager;
@@ -37,13 +38,31 @@ public class AfficherRDVController {
 
     public void AfficherRDV (ActionEvent actionEvent)
     {
-
+        String errorMessage = "";
+        boolean valid;
         // String date= Jour.getEditor().getText();
         LocalDate date= Jour.getValue();
+
+
+        if (Jour.getValue() == null || Jour.getValue().toString().length() == 0) {
+            errorMessage += "No valid date name!\n";
+        }
+        if (errorMessage.length() == 0) {
+           valid= true;
+        } else {
+            // Show the error message.
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+
+            alert.setTitle("Invalid Fields");
+            alert.setHeaderText("Please correct invalid fields");
+            alert.setContentText(errorMessage);
+
+            alert.showAndWait();
+
+            valid= false;
+        }
         Instant instant = Instant.from(date.atStartOfDay(ZoneId.systemDefault()));
         Date datee = Date.from(instant);
-        System.out.println(datee + "\n" + instant + "\n" + date);
-
         try {
             FXMLLoader loader=new FXMLLoader(getClass().getResource("Aficher2.fxml"));
             Parent root = (Parent) loader.load();

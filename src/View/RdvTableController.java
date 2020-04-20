@@ -4,15 +4,22 @@ import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+import Controller.PrinterDocxFile;
+import Controller.PrinterTxtFile;
+import Controller.WordGenerator;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -47,23 +54,16 @@ public class RdvTableController {
     private   Label streetLabel ;
     private ObservableList<Appointment> masterData = null;
     private ObservableList<Appointment> filteredData = FXCollections.observableArrayList();
-
+    AppointmentManager manager=AppointmentManager.getInstance();
+    PrinterTxtFile manager1=PrinterTxtFile.getInstance();
+    PrinterDocxFile manager2=PrinterDocxFile.getInstance();
     /**
      * The constructor. The constructor is called before the initialize()
      * method.
      */
     public RdvTableController() {
-   /*     // Add some sample data to the master data
-      masterData.add(new Person("Hans", "Muster"));
-        masterData.add(new Person("Ruth", "Mueller"));
-        masterData.add(new Person("Heinz", "Kurz"));
-        masterData.add(new Person("Cornelia", "Meier"));
-        masterData.add(new Person("Werner", "Meyer"));
-        masterData.add(new Person("Lydia", "Kunz"));
-        masterData.add(new Person("Anna", "Best"));
-        masterData.add(new Person("Stefan", "Meier"));
-        masterData.add(new Person("Martin", "Mueller"));*/
-   AppointmentManager manager=AppointmentManager.getInstance();
+
+
       masterData=FXCollections.observableArrayList(manager.getAll());
       System.out.println(masterData.size());
         // Initially add all data to filtered data
@@ -80,6 +80,19 @@ public class RdvTableController {
             }
         });
         System.out.println(filteredData.size());
+    }
+    public void print (ActionEvent event) throws Exception
+    {
+        // manager1.openFile();
+       // Appointment selectedPerson = personTable.getSelectionModel().getSelectedItem();
+
+        WordGenerator wg = new WordGenerator();
+
+        Appointment selectedPerson = personTable.getSelectionModel().getSelectedItem();
+        //Create word document according to VK lines
+        wg.createWord(selectedPerson);
+      //  manager1.print(selectedPerson);
+       // manager1.closeFile();
     }
     private void showPersonDetails(Appointment person) {
         if (person != null) {
@@ -109,7 +122,8 @@ public class RdvTableController {
         int selectedIndex = personTable.getSelectionModel().getSelectedIndex();
         if (selectedIndex >= 0) {
             personTable.getItems().remove(selectedIndex);
-
+            Appointment selectedPerson = personTable.getSelectionModel().getSelectedItem();
+              manager.delete(selectedPerson);
         } else {
             // Nothing selected.
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -120,6 +134,17 @@ public class RdvTableController {
 
             alert.showAndWait();
         }
+    }
+    public void changeScreenButton(ActionEvent event) throws IOException
+    {
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Scene tableViewScene = new Scene(tableViewParent);
+
+        //This line gets the Stage information
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
+        window.setScene(tableViewScene);
+        window.show();
     }
     @FXML
     private void handleEditPerson() {
