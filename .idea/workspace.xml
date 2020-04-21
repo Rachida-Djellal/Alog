@@ -2,51 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/file.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file33.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/PrinterDocxFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/ReadFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/WordGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_30_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_30_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TpAlog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TpAlog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/filename.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/medical-appointment.db" beforeDir="false" afterPath="$PROJECT_DIR$/medical-appointment.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/Controller/print/Printer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/Controller/print/PrinterTxtFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/META-INF/TpAlog.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/View/AfficherRDVController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/View/AfficherRDVController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/View/Aficher2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/View/Aficher2.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/View/Aficher2Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/View/Aficher2Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/View/CreerRDVController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/View/CreerRDVController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/View/EditRDV.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/View/EditRDV.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/View/EditRdvCpntroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/View/EditRdvCpntroller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/View/ImprimerRdv.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/View/ImprimerRdvController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/View/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/View/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/View/RdvTable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/View/RdvTable.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/View/RdvTableController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/View/RdvTableController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/View/RdvTableController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/View/RdvTableController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/View/creerRDV.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/View/creerRDV.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/View/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/View/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TpAlog/models/AppointmentManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TpAlog/models/AppointmentManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/AfficherRDVController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/AfficherRDVController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Aficher2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Aficher2.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Aficher2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Aficher2Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Consulter2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Consulter2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/ConsulterRDV.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ConsulterRDV.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/ConsulterRDVController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ConsulterRDVController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/CreerRDVController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/CreerRDVController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/EditRDV.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/EditRDV.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/EditRdvCpntroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/EditRdvCpntroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/ImprimerRdv.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/ImprimerRdvController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/RdvTable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/RdvTable.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/RdvTableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/RdvTableController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/creerRDV.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/creerRDV.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/print/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Printer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/print/PrinterTxtFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PrinterTxtFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/consulter2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/consulter2Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/AppointmentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/AppointmentManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/ClientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/ClientManager.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -114,12 +80,21 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Appointment.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/models/Appointment.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="RdvTableController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/RdvTableController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-45">
-              <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+            <state relative-caret-position="221">
+              <caret line="144" column="32" lean-forward="true" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreerRDVController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/View/CreerRDVController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="127" selection-start-line="127" selection-end-line="127" />
             </state>
           </provider>
         </entry>
@@ -146,11 +121,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/View/CreerRDVController.java" />
         <option value="$PROJECT_DIR$/src/View/AfficherRDVController.java" />
         <option value="$PROJECT_DIR$/src/View/Aficher2Controller.java" />
         <option value="$PROJECT_DIR$/src/View/Main.java" />
-        <option value="$PROJECT_DIR$/src/models/AppointmentManager.java" />
         <option value="$PROJECT_DIR$/src/View/SimpleController.java" />
         <option value="$PROJECT_DIR$/src/View/EditRdvCpntroller.java" />
         <option value="$PROJECT_DIR$/src/View/print/PrinterTxtFile.java" />
@@ -159,13 +132,18 @@
         <option value="$PROJECT_DIR$/src/Controller/PrinterDocxFile.java" />
         <option value="$PROJECT_DIR$/src/Controller/ReadFile.java" />
         <option value="$PROJECT_DIR$/filename.txt" />
-        <option value="$PROJECT_DIR$/src/View/RdvTableController.java" />
         <option value="$PROJECT_DIR$/src/Controller/WordGenerator.java" />
+        <option value="$PROJECT_DIR$/src/View/consulter2Controller.java" />
+        <option value="$PROJECT_DIR$/src/View/ConsulterRDVController.java" />
+        <option value="$PROJECT_DIR$/src/models/ClientManager.java" />
+        <option value="$PROJECT_DIR$/src/models/AppointmentManager.java" />
+        <option value="$PROJECT_DIR$/src/View/RdvTableController.java" />
+        <option value="$PROJECT_DIR$/src/View/CreerRDVController.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1386" />
@@ -263,8 +241,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -282,7 +260,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Nouveau dossier/xmlbeans-3.1.0.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Nouveau dossier (3)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15295257" />
@@ -424,35 +402,35 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1386" height="788" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info id="Image Layers" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31968504" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1647145" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32913387" />
+      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18409425" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16423358" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32913387" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,10 +479,17 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/View/CreerRDVController.java">
+    <entry file="file://$PROJECT_DIR$/src/models/Appointment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="110" column="9" lean-forward="true" selection-start-line="97" selection-start-column="8" selection-end-line="110" selection-end-column="9" />
+        <state relative-caret-position="306">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Appointment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -512,9 +497,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
           <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -529,9 +511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="40" column="77" lean-forward="true" selection-start-line="40" selection-start-column="77" selection-end-line="40" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -553,26 +532,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/AppointmentManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="221" column="90" selection-start-line="221" selection-start-column="90" selection-end-line="221" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/java.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/java.xml" />
     <entry file="file://$PROJECT_DIR$/.idea/libraries/lib.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -580,36 +543,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/bin.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_30_1.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/file33.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/filename.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/filename.txt" />
     <entry file="file://$PROJECT_DIR$/src/Controller/PrinterDocxFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
           <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/RdvTableController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="92" column="38" lean-forward="true" selection-start-line="92" selection-start-column="38" selection-end-line="92" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -627,9 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
           <caret line="76" selection-start-line="76" selection-end-line="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -637,17 +572,65 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#294#302#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/Appointment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-45">
-          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/Consulter2.fxml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/consulter2Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ConsulterRDVController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="52" column="34" lean-forward="true" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/ClientManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="46" column="60" lean-forward="true" selection-start-line="46" selection-start-column="60" selection-end-line="46" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/AppointmentManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="185" column="248" selection-start-line="185" selection-start-column="248" selection-end-line="185" selection-end-column="248" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/RdvTableController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="144" column="32" lean-forward="true" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/CreerRDVController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
         </state>
       </provider>
     </entry>

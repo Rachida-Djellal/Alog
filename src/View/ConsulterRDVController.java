@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 import models.Appointment;
 import models.AppointmentManager;
 import models.Client;
+import models.ClientManager;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -25,18 +26,11 @@ public class ConsulterRDVController {
     private TextField nom;
     @FXML
     private TextField prenom;
-    @FXML
-    private TextField adresse1;
-    @FXML
-    private TextField phone;
-    @FXML
-    private TextField mail;
-    @FXML
-    private TextArea inform;
-    @FXML
-    private ListView<Appointment> list2;
+
+
     // get AppointmentManager instance
     AppointmentManager manager=AppointmentManager.getInstance();
+    ClientManager manager1= ClientManager.getInstance();
     public void changeScreenButtonSample(ActionEvent event) throws IOException
     {
 
@@ -54,17 +48,19 @@ public class ConsulterRDVController {
 
         String patient2= nom.getText();
         String patient1=prenom.getText();
-        String add=adresse1.getText();
-        String mail1=mail.getText();
-        String phone1=phone.getText();
-        String inform1=inform.getText();
-        ArrayList array= new ArrayList<String>();
+        ArrayList<Client> result =new  ArrayList<Client> ();
+        result =  manager1.researtch(patient2,patient1);
+       System.out.println(result);
+
         try {
             FXMLLoader loader=new FXMLLoader(getClass().getResource("Consulter2.fxml"));
             Parent root = (Parent) loader.load();
             consulter2Controller secController=loader.getController();
-            Client patient=new Client(patient2,patient1,add,mail1,phone1,inform1);
-            secController.myFunction(patient);
+
+
+
+
+            secController.myFunction(result);
 
             Stage stage=new Stage();
             stage.setScene(new Scene(root));

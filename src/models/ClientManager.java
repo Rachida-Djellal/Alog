@@ -43,36 +43,60 @@ public class ClientManager  extends DataBaseManager {
         }
     }
 
+  public  ArrayList<Client> researtch (String firstName , String lastName){
+        ArrayList<Client> result =new  ArrayList<Client> ();
+        String sql = "SELECT * FROM " + clientTable + " WHERE  first_name LIKE '%"+firstName+"%' AND last_name LIKE '%"+lastName+"%'" ;
+        try {
+            ResultSet resultSet = query(sql);
+            while (resultSet.next()) {
+                String firstName1 = resultSet.getString("first_name");
+                String lastName2 = resultSet.getString("last_name");
+                int id = resultSet.getInt("id");
+                String address = resultSet.getString("address");
+                String phone = resultSet.getString("phone");
+                String email = resultSet.getString("email");
+                String information = resultSet.getString("information");
+                Client client = new Client(id, firstName1, lastName2, address, phone, email, information);
+                result.add(client);
+            }
+        }
 
+        catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+        return result ;
+
+    }
     public ArrayList<Client> getAll(){
 
-             // Client table is defined in the DataBaseManager class
-            String sql = "SELECT * FROM  " + clientTable ;
+        // Client table is defined in the DataBaseManager class
+        String sql = "SELECT * FROM  " + clientTable ;
 
-            ArrayList<Client> result = new ArrayList<>();
+        ArrayList<Client> result = new ArrayList<>();
 
-            // query function is declared in the DataBaseManage Class
-            try (ResultSet resultSet = super.query(sql)) {
+        // query function is declared in the DataBaseManage Class
+        try (ResultSet resultSet = super.query(sql)) {
 
-                while (resultSet.next()){
-                    String firstName = resultSet.getString("first_name");
-                    String lastName = resultSet.getString("last_name");
-                    int id = resultSet.getInt("id");
-                    String address = resultSet.getString("address");
-                    String phone = resultSet.getString("phone");
-                    String email = resultSet.getString("email");
-                    String information = resultSet.getString("information");
-                    Client client = new Client( id, firstName,  lastName,  address, phone,  email,  information);
-                    result.add(client);
-                }
-
-            } catch (SQLException e) {
-                e.printStackTrace();
-                System.out.println(e.getMessage());
+            while (resultSet.next()){
+                String firstName = resultSet.getString("first_name");
+                String lastName = resultSet.getString("last_name");
+                int id = resultSet.getInt("id");
+                String address = resultSet.getString("address");
+                String phone = resultSet.getString("phone");
+                String email = resultSet.getString("email");
+                String information = resultSet.getString("information");
+                Client client = new Client( id, firstName,  lastName,  address, phone,  email,  information);
+                result.add(client);
             }
 
-            return result ;
-
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
+
+        return result ;
+
+    }
 
 }

@@ -125,11 +125,12 @@ public class CreerRDVController
         String eml=email.getText();
         String information=infos.getText();
         String adr=adresse.getText();
-
+     datee.setTime(Long.parseLong(heure));
         Client patient = new Client(nom,pre,adr,telephone,eml,information);
         manager1.insertClient(patient);
         Appointment RDV= new Appointment(patient,datee,objet);
         manager.create(RDV);
+        System.out.println(RDV.getId());
 
    if  (valid==true) {
        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);

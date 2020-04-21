@@ -52,6 +52,14 @@ public class RdvTableController {
     private   Label lastNameLabel ;
     @FXML
     private   Label streetLabel ;
+    @FXML
+    private   Label adresse ;
+    @FXML
+    private   Label phone ;
+    @FXML
+    private   Label email ;
+    @FXML
+    private   Label object ;
     private ObservableList<Appointment> masterData = null;
     private ObservableList<Appointment> filteredData = FXCollections.observableArrayList();
     AppointmentManager manager=AppointmentManager.getInstance();
@@ -100,7 +108,10 @@ public class RdvTableController {
             firstNameLabel.setText(person.getClient().getLastName());
             lastNameLabel.setText(person.getClient().getFirstName());
             streetLabel.setText(person.getTime().toString());
-
+             adresse.setText(person.getClient().getAddress());
+             phone.setText(person.getClient().getPhone());
+             email.setText(person.getClient().getEmail());
+             object.setText(person.getObject());
 
             // TODO: We need a way to convert the birthday into a String!
             // birthdayLabel.setText(...);
@@ -123,7 +134,15 @@ public class RdvTableController {
         if (selectedIndex >= 0) {
             personTable.getItems().remove(selectedIndex);
             Appointment selectedPerson = personTable.getSelectionModel().getSelectedItem();
+            System.out.println(selectedPerson.getId());
               manager.delete(selectedPerson);
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+
+            alert.setTitle("confirmation");
+            alert.setHeaderText("succee");
+            alert.setContentText("le rendezvous est supprime");
+
+            alert.showAndWait();
         } else {
             // Nothing selected.
             Alert alert = new Alert(Alert.AlertType.WARNING);

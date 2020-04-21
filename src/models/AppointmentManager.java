@@ -46,8 +46,8 @@ public class AppointmentManager extends DataBaseManager {
 
         // Client table is defined in the DataBaseManager class
         String sql = "SELECT a.id , a.appointment_date , a.id_client  , a.object , c.first_name , c.last_name , c.address , c.phone , c.email , c.information FROM  " +
-                    appointmentTable  +" AS a JOIN " + clientTable +
-                    " AS c ON c.id = a.id_client ORDER BY a.appointment_date ASC" ;
+                appointmentTable  +" AS a JOIN " + clientTable +
+                " AS c ON c.id = a.id_client ORDER BY a.appointment_date ASC" ;
 
         ArrayList<Appointment> result = new ArrayList<>();
 
@@ -56,7 +56,7 @@ public class AppointmentManager extends DataBaseManager {
             while (resultSet.next()){
                 Client client = this.fetchClient(resultSet);
                 Appointment appointment = fetchAppointment(resultSet,client);
-                 result.add(appointment);
+                result.add(appointment);
             }
         } catch (SQLException | ParseException e) {
             e.printStackTrace();
@@ -66,15 +66,15 @@ public class AppointmentManager extends DataBaseManager {
 
     }
 
-/**
- * This function returns a list of appointment for the client passing on parameter sorted by the date
- * */
+    /**
+     * This function returns a list of appointment for the client passing on parameter sorted by the date
+     * */
     public ArrayList<Appointment> getByClient(Client client){
 
 
-       String sql = " WITH appointment_query AS (SELECT * FROM appointment WHERE id_client = "+ client.getId()+ ")" +
-                    " SELECT * FROM appointment_query AS q JOIN client ON client.id = q.id_client"+
-                    " ORDER BY q.appointment_date ASC";
+        String sql = " WITH appointment_query AS (SELECT * FROM appointment WHERE id_client = "+ client.getId()+ ")" +
+                " SELECT * FROM appointment_query AS q JOIN client ON client.id = q.id_client"+
+                " ORDER BY q.appointment_date ASC";
 
         ArrayList<Appointment> result = new ArrayList<>();
 
@@ -98,7 +98,7 @@ public class AppointmentManager extends DataBaseManager {
     public void update( Appointment appointment){
 
         String sql = "UPDATE " + appointmentTable + " AS a SET " + appointmentColumns[1] + " = '" + DATE_FORMAT_DETAILS.format(appointment.getTime()) +
-                     "' WHERE a.id = " + appointment.getId();
+                "' WHERE a.id = " + appointment.getId();
         try {
 
             System.out.println(sql);
@@ -128,7 +128,7 @@ public class AppointmentManager extends DataBaseManager {
             System.out.println(e.getMessage());
         }
 
-      return result ;
+        return result ;
     }
 
 
@@ -140,7 +140,7 @@ public class AppointmentManager extends DataBaseManager {
      * I don't use all the columns -I talk about id_client because I'm passing the Client as a parameter to the function
      * also the name -id_client- on the clientColumns doesn't exist on the clientTable it's named id ( this may make confuse )
      * */
-     @NotNull
+    @NotNull
     private Appointment fetchAppointment(ResultSet resultSet ,  Client client) throws SQLException, ParseException {
 
         int id = resultSet.getInt(appointmentColumns[0]);
@@ -151,7 +151,7 @@ public class AppointmentManager extends DataBaseManager {
         Date date =DATE_FORMAT_DETAILS.parse(time);
         String object =resultSet.getString(appointmentColumns[3]);
         Appointment appointment = new Appointment(id,client,date , object);
-         appointmentInInstance.put(id, appointment);
+        appointmentInInstance.put(id, appointment);
         return  appointment;
     }
 
@@ -183,10 +183,16 @@ public class AppointmentManager extends DataBaseManager {
 
         // I have to change this query , but now it works
         String sql ="INSERT INTO " + appointmentTable +" ('appointment_date','id_client' , 'object') VALUES ('"+DATE_FORMAT_DETAILS.format(appointment.getTime())+"','"+appointment.getClient().getId()+"','"+appointment.getObject() +"')";
-        try {
-            System.out.println(sql);
-            super.insert(sql);
+        String getQuery = "SELECT id FROM " + appointmentTable + " WHERE  object = '" + appointment.getObject()+"' AND id_client = '" + appointment.getClient().getId() + "' AND  appointment_date ='"+DATE_FORMAT_DETAILS.format(appointment.getTime()) +"'";
+       System.out.println(getQuery);
 
+        try {
+
+            super.insert(sql);
+            ResultSet resultSet = super.query(getQuery);
+            appointment.setId(resultSet.getInt("id"));
+            int i=resultSet.getInt("id");
+            System.out.println(i);
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println(e.getMessage());
@@ -196,8 +202,8 @@ public class AppointmentManager extends DataBaseManager {
 
     public ArrayList<Appointment> getAppointmentByDay(Date day){
 
-      String sql = " WITH dat as (SELECT * FROM appointment  WHERE strftime('%Y-%m-%d' ,appointment.appointment_date) = '" + DATE_FORMAT.format(day)  +"')"+
-                   "  SELECT * FROM dat JOin client on client.id = dat.id_client" ;
+        String sql = " WITH dat as (SELECT * FROM appointment  WHERE strftime('%Y-%m-%d' ,appointment.appointment_date) = '" + DATE_FORMAT.format(day)  +"')"+
+                "  SELECT * FROM dat JOin client on client.id = dat.id_client" ;
 
         ArrayList<Appointment> result = new ArrayList<>();
         try (ResultSet resultSet = super.query(sql)) {
@@ -209,9 +215,9 @@ public class AppointmentManager extends DataBaseManager {
             }
         }
         catch (SQLException | ParseException e) {
-                e.printStackTrace();
-                System.out.println(e.getMessage());
-            }
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
         return result;
 
     }
@@ -219,7 +225,7 @@ public class AppointmentManager extends DataBaseManager {
 
 
     public  void delete(Appointment appointment){
-        String sql ="DELETE FROM " + appointmentTable + "WHERE id = '"+appointment.getId() + "'";
+        String sql ="DELETE FROM " + appointmentTable + " WHERE id = '"+appointment.getId() + "'";
         try {
             query(sql);
         } catch (SQLException e) {
@@ -228,5 +234,30 @@ public class AppointmentManager extends DataBaseManager {
 
 
     }
+ /*   public  ArrayList<Appointment> researtch (String firstName , String lastName){
+        ArrayList<Client> result =new  ArrayList<Client> ();
+        String sql = "SELECT * FROM " + clientTable + " WHERE  first_name LIKE '%"+firstName+"%' AND last_name LIKE '%"+lastName+"%'" ;
+        try {
+            ResultSet resultSet = query(sql);
+            while (resultSet.next()) {
+                String firstName1 = resultSet.getString("first_name");
+                String lastName2 = resultSet.getString("last_name");
+                int id = resultSet.getInt("id");
+                String address = resultSet.getString("address");
+                String phone = resultSet.getString("phone");
+                String email = resultSet.getString("email");
+                String information = resultSet.getString("information");
+                Client client = new Client(id, firstName1, lastName2, address, phone, email, information);
+                result.add(client);
+            }
+        }
+
+        catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+        return result ;
+
+    }*/
 
 }

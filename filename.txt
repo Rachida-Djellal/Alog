@@ -1,0 +1,80 @@
+******************************************* Rendez-vous N° 2 ******************************************
+La date : 12-04-2020  23:46
+L'objet : Radio
+
+-------- Le patient N°6-------
+
+- Le nom et prenom du patient : Ismail Kherbach
+- L'adresse : Mazouna
+- Le numero du telephone : 0356536346
+- Email : gi_kharbach@esi.dz
+- Information supplementaire : lkjdsfsdf
+
+*******************************************************************************************************
+
+
+
+******************************************* Rendez-vous N° 3 ******************************************
+La date : 30-04-2020  00:00
+L'objet : hgfxhxf
+
+-------- Le patient N°26-------
+
+- Le nom et prenom du patient :  Amani  Djellal
+- L'adresse : msila
+- Le numero du telephone : 255
+- Email :  xh
+- Information supplementaire : ydjyj
+
+*******************************************************************************************************
+
+
+
+******************************************* Rendez-vous N° 21 ******************************************
+La date : 01-05-2020  00:00
+L'objet : vdwv
+
+-------- Le patient N°27-------
+
+- Le nom et prenom du patient :  imad  Djellal
+- L'adresse : vdwv
+- Le numero du telephone : 568.
+- Email :  mlkjhgfd
+- Information supplementaire : bhnj,
+
+*******************************************************************************************************
+
+
+
+******************************************* Rendez-vous N° 22 ******************************************
+La date : 02-05-2020  00:00
+L'objet : WXCVB 
+
+-------- Le patient N°28-------
+
+- Le nom et prenom du patient :  NAIMA  AHMIM
+- L'adresse : NBV
+- Le numero du telephone : 45252
+- Email :  HJGFD
+- Information supplementaire : CCXCVB
+
+*******************************************************************************************************
+
+
+
+******************************************* Rendez-vous N° 23 ******************************************
+La date : 09-05-2020  00:00
+L'objet : cv n
+
+-------- Le patient N°29-------
+
+- Le nom et prenom du patient :  sofian  fvdwbg
+- L'adresse : hfgdfs
+- Le numero du telephone : .3.210
+- Email :  nvn c
+- Information supplementaire : fvdc
+
+*******************************************************************************************************
+
+
+
